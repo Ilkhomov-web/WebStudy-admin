@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import DrawerMenu from "../components/DrawerMenu";
 import DataCards from "../components/dataCards/DataCards";
+import Charts from "../components/Charts";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
@@ -17,6 +18,7 @@ const Home = () => {
       <DrawerMenu open={open} toggleDrawer={toggleDrawer} />
       <Container maxWidth={"lg"}>
         <DataCards />
+        <Charts />
       </Container>
     </Box>
   );
