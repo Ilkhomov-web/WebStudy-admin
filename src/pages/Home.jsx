@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import DrawerMenu from "../components/DrawerMenu";
 import DataCards from "../components/dataCards/DataCards";
 import Charts from "../components/Charts";
+import WeekCards from "../components/WeekCards";
 
 const Home = () => {
   const [open, setOpen] = React.useState(false);
@@ -19,6 +20,7 @@ const Home = () => {
       <Container maxWidth={"lg"}>
         <DataCards />
         <Charts />
+        <WeekCards />
       </Container>
     </Box>
   );

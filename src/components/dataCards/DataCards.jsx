@@ -11,7 +11,7 @@ const DataCards = () => {
   );
 
   return (
-    <Grid container spacing={2} sx={{ marginTop: "50px" }}>
+    <Grid container spacing={2} sx={{ marginTop: "30px" }}>
       <Grid size={{ md: 6, sm: 12, xs: 12 }}>
         <DataCard title="Total Students" value={students.length} />
       </Grid>

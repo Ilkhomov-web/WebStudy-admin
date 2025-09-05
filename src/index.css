@@ -1,15 +1,16 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
-body{
-  height: 100vh;
+body {
+  min-height: 100vh; /* 100% dan uzun bo‘lsa scroll bo‘ladi */
   background-image: url(/back.jfif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* filter: brightness(0.7); */
+  background-attachment: fixed; /* rasm joyida qotib turadi */
+  padding-bottom: 20px;
 }

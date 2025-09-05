@@ -5,7 +5,7 @@ export const students = [
       id: 1,
       name: "Aliyev Jasur",
       img: "https://randomuser.me/api/portraits/men/32.jpg",
-      total_grade: 86,
+      total_grade: 36,
     },
     {
       id: 2,

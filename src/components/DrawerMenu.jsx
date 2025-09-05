@@ -46,6 +46,7 @@ const DrawerMenu = (prop) => {
       <List>
         <ListItem>
           <Link
+            to={"/students"}
             style={{
               textDecoration: "none",
               color: "currentcolor",
@@ -53,7 +54,7 @@ const DrawerMenu = (prop) => {
             }}
           >
             <ListItemButton sx={{ width: "100%" }}>
-              <ListItemText>Elka</ListItemText>
+              <ListItemText>Student List</ListItemText>
             </ListItemButton>
           </Link>
         </ListItem>
