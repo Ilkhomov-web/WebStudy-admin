@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar";
 import DrawerMenu from "../components/DrawerMenu";
 import { students } from "../data/studentsData";
 import Students from "../components/studentsList/StudenTable";
-import { Add } from "@mui/icons-material";
 import AddStudentModal from "../components/studentsList/AddStudentModal";
+import AddStudentBall from "../components/studentsList/AddStudentBall";
 
 const style = {
   position: "absolute",
@@ -17,10 +17,16 @@ const style = {
   border: "2px solid #000",
   boxShadow: 24,
   p: 4,
+  display: "flex",
+  flexDirection: "column",
+  gap: "20px",
 };
 
 const StudentList = () => {
   const [open, setOpen] = useState(false);
+  const [modalBallOpen, setModalBallOpen] = useState(false);
+  const handleBallOpen = () => setModalBallOpen(true);
+  const handleBallClose = () => setModalBallOpen(false);
   const [modalOpen, setModalOpen] = useState(false);
   const handleOpen = () => setModalOpen(true);
   const handleClose = () => setModalOpen(false);
@@ -49,9 +55,14 @@ const StudentList = () => {
           <Typography variant="h4" color="white">
             Students - {students.length}
           </Typography>
-          <Button variant="contained" onClick={handleOpen}>
-            Add Student
-          </Button>
+          <Box sx={{ display: "flex", gap: "10px" }}>
+            <Button variant="contained" onClick={handleBallOpen}>
+              Student Ball
+            </Button>
+            <Button variant="contained" onClick={handleOpen}>
+              Add Student
+            </Button>
+          </Box>
         </Box>
 
         <Students students={students} />
@@ -59,6 +70,11 @@ const StudentList = () => {
           style={style}
           modalOpen={modalOpen}
           handleClose={handleClose}
+        />
+        <AddStudentBall
+          modalBallOpen={modalBallOpen}
+          handleBallClose={handleBallClose}
+          style={style}
         />
       </Container>
     </Box>
